@@ -1,0 +1,17 @@
+# checks if the rewrite module is enabled 
+# avoids confusing like index.php/ or index
+# activates rewrite engine
+# the root base
+# looks in public folder for requested files
+#
+# if the file doesn't exist, it rewrites to index.php
+# =$1 is a placeholder/variable (public?url=posts ==> public/posts)
+
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine On
+    RewriteBase /Le_pire_coin_v3/public
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>

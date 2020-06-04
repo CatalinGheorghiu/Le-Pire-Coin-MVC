@@ -69,7 +69,7 @@ class Database
     //Execute the prepared stmt
     public function execute()
     {
-        $this->stmt->execute();
+        return $this->stmt->execute();
     }
 
     //Get result set as array of objects
@@ -90,5 +90,11 @@ class Database
     public function rowCount()
     {
         return $this->stmt->rowCount();
+    }
+
+    public function getColumn()
+    {
+        $this->execute();
+        return $this->stmt->fetchColumn();
     }
 }

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9a99710b3e.js" crossorigin="anonymous"></script>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css">
@@ -32,41 +34,41 @@
         <nav>
             <ul class="list-reset md:flex md:items-center">
 
-                <?php if (!isset($_SESSION['logged'])) : ?>
-
+                <?php if (isset($_SESSION['user_id'])) : ?>
                     <li class="md:ml-4">
-                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/login">
-                            Login
+                        <p class="border-t block no-underline  py-2 text-green-600 md:border-none md:p-0">
+                            <?= $_SESSION['user_name'] ?> |
+                        </p>
+                    </li>
+                    <li class="md:ml-4">
+                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/posts/add">
+                            Add |
                         </a>
                     </li>
                     <li class="md:ml-4">
-                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/register">
-                            Register
+                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/posts/dashboard">
+                            Dashboard |
+                        </a>
+                    </li>
+                    <li class="md:ml-4">
+                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/logout">
+                            Logout |
                         </a>
                     </li>
 
                 <?php else : ?>
                     <li class="md:ml-4">
-                        <p class=" block no-underline  py-2 text-green-600 md:border-none md:p-0">
-                            <?= $_SESSION['user_name']; ?> |
-                        </p>
-                    </li>
-                    <li class="md:ml-4">
-                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/posts/add.php">
-                            Add Post
+                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/login">
+                            Login |
                         </a>
                     </li>
                     <li class="md:ml-4">
-                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/dashboard.php">
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="md:ml-4">
-                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/logout.php?logout">
-                            Logout
+                        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="<?= URL_ROOT; ?>/users/register">
+                            Register |
                         </a>
                     </li>
                 <?php endif; ?>
+
 
             </ul>
         </nav>

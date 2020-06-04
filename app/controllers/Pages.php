@@ -7,21 +7,17 @@ class Pages extends Controller
         $this->postModel = $this->model('Post');
     }
 
-    public function index()
-    {
+    // public function index()
+    // {
 
-        $posts = $this->postModel->getPosts();
+    //     $posts = $this->postModel->getAllPosts();
 
-        $data = [
-            'title' => 'Welcome',
-            'posts' => $posts
-        ];
+    //     $data = [
+    //         'title' => 'Welcome',
+    //         'posts' => $posts
+    //     ];
 
 
-        $this->view('pages/index', $data);
-    }
-
-    public function about()
-    {
-    }
+    //     $this->view('index', $data);
+    // }
 }

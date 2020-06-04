@@ -1,4 +1,4 @@
-<?php include "header.phtml"; ?>
+<?php require APP_ROOT . '/views/include/header.php'; ?>
 <!-- 
 <div class="main">
     <div class="container">
@@ -31,10 +31,10 @@
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter'>
     <div id="problem-here" class="flex-grow container mx-auto p-4 ">
         <div class="text-gray-700 body-font relative">
-            <form action="add.php" method="post" class="add-post" enctype="multipart/form-data">
+            <form action="<?= URL_ROOT; ?>/posts/add" method="post" class="add-post" enctype="multipart/form-data">
                 <div class="container px-5 py-24 mx-auto flex">
                     <div class=" flex flex-col mx-auto relative z-10 w-full lg:w-8/12">
-                        <h2 class="text-gray-900  text-center my-10 text-4xl title-font">Add post</h2>
+                        <h2 class="text-gray-900  text-center my-10 text-4xl title-font">Add your announce</h2>
 
                         <input name="title" type="text" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Title">
                         <textarea name="content" placeholder="Content" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"></textarea>
@@ -52,4 +52,4 @@
 
 
 
-<?php include "footer.phtml"; ?>
+<?php require APP_ROOT . '/views/include/footer.php'; ?>

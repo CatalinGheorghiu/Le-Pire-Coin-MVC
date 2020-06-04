@@ -1,28 +1,26 @@
 <?php require APP_ROOT . '/views/include/header.php'; ?>
-<?php if (isset($_GET['register'])) {
-    if ($_GET['register'] == 'success') {
-        echo  "<h2 class='success-alert '>Registration successfully! You can now login in to your account!</h2>";
-    }
-}; ?>
+
+<?php flash('register_success'); ?>
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter items-center justify-center'>
     <div class="w-full max-w-xs">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="login.php" method="post">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="<?= URL_ROOT; ?>/users/login" method="post">
+            <h1 class="text-3xl text-center pb-8">Login</h1>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                     Email
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" required value="<?= htmlspecialchars($email); ?>" required>
-                <?php if (isset($user_err)) : ?>
-                    <p class="text-red-500 text-xs italic"><?= $user_err; ?></p>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" value="<?= htmlspecialchars($data['email']); ?>">
+                <?php if (isset($data['email_err'])) : ?>
+                    <p class="text-red-500 text-xs italic"><?= $data['email_err']; ?></p>
                 <?php endif; ?>
             </div>
             <div class="mb-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
                     Password
                 </label>
-                <input class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" minlength="6" name="password" autocomplete="on" placeholder="******" value="<?= htmlspecialchars($password); ?>" required>
-                <?php if (isset($password_err)) : ?>
-                    <p class=" text-red-500 text-xs italic"><?= $password_err; ?></p>
+                <input class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" name="password" autocomplete="on" placeholder="******" value="<?= htmlspecialchars($data['password']); ?>">
+                <?php if (isset($data['password_err'])) : ?>
+                    <p class=" text-red-500 text-xs italic"><?= $data['password_err']; ?></p>
                 <?php endif; ?>
             </div>
             <div class="flex items-center justify-between">

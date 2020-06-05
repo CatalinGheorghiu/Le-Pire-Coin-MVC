@@ -2,7 +2,7 @@
 
 /**
  ** App core class
- *  Cretes URL's and loads core controller
+ *  Creates URL's and loads core controller
  *  URL FORMAT - /controller/method/params
  */
 

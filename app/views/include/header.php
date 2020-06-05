@@ -13,7 +13,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen bg-grey">
-    <header class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4 ">
+    <header class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4  ">
 
         <!-- Logo text or image -->
         <div class="flex items-center justify-between mb-4 md:mb-0">
@@ -31,7 +31,7 @@
         <!-- END Logo text or image -->
 
         <!-- Global navigation -->
-        <nav>
+        <nav class="">
             <ul class="list-reset md:flex md:items-center">
 
                 <?php if (isset($_SESSION['user_id'])) : ?>

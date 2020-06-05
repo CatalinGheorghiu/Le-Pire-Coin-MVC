@@ -4,7 +4,9 @@ module.exports = {
         container: {
             center: true,
         },
-        
+        letterSpacing: {
+            large: ".75em",
+        },
     },
     variants: {},
     plugins: [],

@@ -4,7 +4,6 @@
 
     <div class="flex-grow container mx-auto p-4 ">
         <!-- Card -->
-
         <div class="my-8 mx-auto shadow-lg  px-10 xl:w-3/4">
             <h1 class="text-5xl text-center  "><?= $data['post']->title; ?></h1>
             <!-- Images -->
@@ -21,7 +20,6 @@
             <div class="py-8 flex flex-wrap md:flex-no-wrap ">
                 <!-- Content -->
                 <div class="md:flex-grow w-full">
-
                     <!-- Price -->
                     <p class="leading-relaxed flex justify-between mb-3 "><span class="italic"><i class="fas fa-hand-holding-usd text-green-500"></i> Price: </span> <span class=" text-xl font-bold"><?= $data['post']->price; ?> €</span></p>
                     <!-- Location -->

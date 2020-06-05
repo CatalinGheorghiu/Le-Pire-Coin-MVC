@@ -1,5 +1,5 @@
 <?php require APP_ROOT . '/views/include/header.php'; ?>
-<?php flash('add_success'); ?>
+<?php flash('post_message'); ?>
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter'>
     <h1 class="text-5xl text-center">Here are your latest posts</h1>
     <div class="flex-grow container mx-auto p-4 ">
@@ -28,21 +28,32 @@
                         <p class="leading-relaxed flex justify-between"> <span class="italic mr-10"><i class="far fa-calendar-alt text-green-500"></i> First registration: </span> <?= $post->registration_date; ?></p>
 
                         <p class="leading-relaxed py-2"></p>
-                        <!-- Button MORE -->
-                        <div class="mt-6">
-                            <a class="text-green-500 inline-flex items-center  float-right" href="<?= URL_ROOT; ?>/posts/details/<?= $post->postId; ?>">Learn More
-                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-2 cursor-pointer ">
-                                Edit
-                            </a>
-                            <a class=" leading-tight bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded cursor-pointer">
-                                Delete
-                            </a>
+                        <!-- Buttons -->
+                        <div class="mt-6  flex flex-row-reverse justify-between">
+
+                            <div class="flex ">
+                                <a class="ml-40 text-green-500 inline-flex items-center  " href="<?= URL_ROOT; ?>/posts/details/<?= $post->postId; ?>">Learn More
+                                    <i class="fas fa-long-arrow-alt-right ml-3 text-xl"></i>
+                                </a>
+                            </div>
+
+                            <div class="flex">
+                                <a class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-2 cursor-pointer mx-3" href="<?= URL_ROOT; ?>/posts/edit/<?= $post->postId; ?>">
+                                    Edit
+                                </a>
+
+                                <form action="<?= URL_ROOT; ?>/posts/delete/<?= $post->postId; ?>" method="POST" class="flex flex">
+                                    <!-- <a class=" leading-tight bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded cursor-pointer">
+                                    Delete
+                                </a> -->
+                                    <input type="submit" value="Delete" class="leading-tight bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded cursor-pointer">
+                                </form>
+                            </div>
+
+
+
                         </div>
+
                         <!-- End of Button -->
                     </div>
                     <!-- End of content -->

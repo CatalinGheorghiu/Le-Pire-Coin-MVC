@@ -8,7 +8,7 @@
                 <span class="sm:text-xs ml-3 md:text-xl">Le pire coin</span>
             </a>
             <p class="text-sm items-center justify-center text-gray-500 sm:ml-6 sm:mt-0  ">© 2020 Ionut
-                <a href="#" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">Gheorghiu</a>
+                <a href="https://github.com/CatalinGheorghiu" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">Gheorghiu</a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                 <a class="text-gray-500">

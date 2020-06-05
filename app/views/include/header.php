@@ -22,7 +22,7 @@
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
             </a>
-            <h1 class="leading-none text-2xl text-grey-darkest p-4">
+            <h1 class="leading-none text-2xl text-grey-darkest p-4 transition duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-110 ">
                 <a class="no-underline text-grey-darkest hover:text-black" href="<?= URL_ROOT; ?>">
                     <?= SITE_NAME; ?>
                 </a>

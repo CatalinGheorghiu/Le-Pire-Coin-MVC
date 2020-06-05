@@ -1,32 +1,4 @@
 <?php require APP_ROOT . '/views/include/header.php'; ?>
-<!-- 
-<div class="main">
-    <div class="container">
-        <form action="add.php" method="post" class="add-post" enctype="multipart/form-data">
-            <h1 class="text-center">Add your post here</h1>
-
-            <div class="form-control">
-                <label for="title">Title : </label>
-                <input type="text" name="title" placeholder="Please enter title">
-            </div>
-
-            <div class="form-control">
-                <label for="content">Content : </label>
-                <textarea name="content" id="" cols="30" rows="10"></textarea>
-            </div>
-
-            <div class="form-control ">
-                <label for="file" class="custom-file-label">Chose File</label>
-                <input type="file" name="file[]" class="" id="file" accept="image/png, image/jpeg" multiple>
-            </div>
-
-
-
-            <input class="btn mb-2 py-2" type="submit" name="add-post" value="Add post">
-
-        </form>
-    </div>
-</div> -->
 
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter'>
     <div id="problem-here" class="flex-grow container mx-auto p-4 ">
@@ -60,7 +32,7 @@
 
                             <div>
                                 <input name="registration_date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2  " placeholder="First registration" value="<?= htmlspecialchars($data['registration_date']); ?>">
-                                
+
                                 <?php if (isset($data['first_registration_err'])) : ?>
                                     <p class="text-red-500 text-xs italic mb-4"><?= $data['first_registration_err']; ?></p>
                                 <?php endif; ?>

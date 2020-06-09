@@ -1,11 +1,10 @@
 <?php require APP_ROOT . '/views/include/header.php'; ?>
 
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter'>
-
     <div class="flex-grow container mx-auto p-4 ">
         <!-- Card -->
         <div class="my-8 mx-auto shadow-lg  px-10 xl:w-3/4">
-            <h1 class="text-4xl text-center  mb-5"><?= $data['post']->title; ?></h1>
+            <h1 class="text-2xl text-center  sm:text-4xl mb-5"><?= $data['post']->title; ?></h1>
 
             <div class="swiper-container h-pixels-300 md:h-pixels-500 lg:h-pixels-600 ">
                 <div class="swiper-wrapper ">
@@ -47,16 +46,17 @@
                 </div>
             </div>
             <!-- Details -->
-            <div>
+            <div class="w-full">
                 <h2 class="underline text-center mb-10 font-bold">Vehicle Description</h2>
-                <p class="pb-10 text-center"><?= $data['post']->full_description; ?></p>
+                <p class="pb-10 text-center">
+                    <?= $data['post']->full_description; ?></p>
             </div>
-            <div class=" pb-10 text-justify">
+            <div class="flex pb-10 text-justify">
                 <!-- Button BACK -->
-                
-                    <a class=" leading-tight bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white align-middle py-2 px-4 border border-green-500 hover:border-transparent rounded cursor-pointer" href="javascript:history.back()">
-                        <i class="fas fa-long-arrow-alt-left  mr-4 "></i> Back
-                    </a>
+
+                <a class="mx-auto leading-tight bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white align-middle py-2 px-4 border border-green-500 hover:border-transparent rounded cursor-pointer" href="javascript:history.back()">
+                    <i class="fas fa-long-arrow-alt-left  mr-4 "></i> Back
+                </a>
             </div>
 
         </div>

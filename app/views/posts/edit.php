@@ -1,7 +1,7 @@
 <?php require APP_ROOT . '/views/include/header.php'; ?>
 
 <div id="content" class='flex flex-col flex-auto bg-grey-lighter'>
-    <div  class="flex-grow container mx-auto p-4 ">
+    <div class="flex-grow container mx-auto p-4 ">
         <div class="text-gray-700 body-font relative">
             <h2 class="text-gray-900  text-center my-10 text-4xl title-font">Edit your announce</h2>
             <form action="<?= URL_ROOT; ?>/posts/edit/<?= $data['id']; ?>" method="post" class="edit-post" enctype="multipart/form-data">
@@ -76,7 +76,7 @@
 
 
 
-                        <textarea name="full-description" placeholder="Full description" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"></textarea>
+                        <textarea name="full-description" placeholder="Full description" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"><?= htmlspecialchars($data['full_description']); ?></textarea>
 
                         <input type="file" name="file[]" class=" py-2 mb-4" id="file" accept="image/png, image/jpeg" multiple>
 

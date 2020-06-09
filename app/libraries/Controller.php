@@ -1,8 +1,8 @@
 <?php
 
 /**
- * This is the base controller
- * This loads the model and views
+ ** This is the base controller
+ ** This loads the model and views
  */
 
 class Controller

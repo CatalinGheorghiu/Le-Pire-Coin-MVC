@@ -1,15 +1,17 @@
+//* 
 const alert = document.getElementById("msg-flash");
-
+//If the alert message class is available..
 if (alert) {
+    //Remove the message after 7s
     setTimeout(() => {
         alert.remove();
     }, 7000);
 }
 
-/* ************************************************** */
+//*PREVIEW IMAGES BEFORE SUBMIT
 const inputFile = document.querySelector("#file");
 const previewContainer = document.querySelector("#preview-container");
-// const previewImage = previewContainer.querySelector(".img-prev");
+//If files added...
 if (inputFile) {
     inputFile.addEventListener("change", function () {
         const filesList = this.files;
@@ -45,6 +47,7 @@ if (inputFile) {
     });
 }
 
+//Instantiate the SwiperJS class
 var swiper = new Swiper(".swiper-container", {
     effect: "coverflow",
     grabCursor: true,

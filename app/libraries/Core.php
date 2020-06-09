@@ -1,9 +1,9 @@
 <?php
 
 /**
- ** App core class
- *  Creates URL's and loads core controller
- *  URL FORMAT - /controller/method/params
+ **  App core class
+ **  Creates URL's and loads core controller
+ **  URL FORMAT - /controller/method/params
  */
 
 class Core

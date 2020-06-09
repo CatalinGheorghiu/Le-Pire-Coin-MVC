@@ -37,6 +37,7 @@
         </div>
     </div>
 </footer>
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
 <!-- Main Script -->
 <script src="<?= URL_ROOT; ?>/js/script.js"></script>
 </body>

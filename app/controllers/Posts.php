@@ -30,6 +30,8 @@ class Posts extends Controller
             'test' => 'Dashboard is working',
             'posts' => $posts,
         ];
+        // var_dump($posts);
+
         $this->view('posts/dashboard', $data);
     }
 
@@ -112,6 +114,8 @@ class Posts extends Controller
             if (empty($data['title_err']) && empty($data['price_err']) && empty($data['mileage_err']) && empty($data['first_registration_err']) && empty($data['cubic_capacity_err']) && empty($data['power_err']) && empty($data['fuel_err']) && empty($data['location_err']) && empty($data['phone_number_err'])) {
                 //Add the announce
                 if ($this->postModel->addPost($data)) {
+
+
                     //flash msg
                     flash('add_success', 'Announce successfully added!');
                     //redirect
@@ -156,10 +160,14 @@ class Posts extends Controller
     public function details($id)
     {
         $post = $this->postModel->showDetails($id);
+        $urls = explode(',', $post->img_url);
+        // var_dump($urls);
 
         $data = [
             'post' => $post,
+            'images' => $urls
         ];
+
         $this->view('posts/details', $data);
     }
 

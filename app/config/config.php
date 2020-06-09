@@ -16,6 +16,5 @@ define('SITE_NAME', 'Le Pire Coin');
 
 //Upload files
 define('MIME_TYPES_ACCEPTED', ['image/png', 'image/jpeg']);
-define('MAX_FILE_SIZE', 5000000);
-
-define('UPLOADED_FILES_FOLDER_PATH', 'upload');
+define('MAX_FILE_SIZE', 50000000);
+define('UPLOADED_FILES_FOLDER_PATH','upload');

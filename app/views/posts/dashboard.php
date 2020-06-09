@@ -6,13 +6,19 @@
         <!-- Card -->
         <div class="my-8 mx-auto shadow-lg  px-10 xl:w-3/4">
             <?php foreach ($data['posts'] as $post) : ?>
+                <?php $urls = explode(',', $post->img_url);
+                $url = explode('/', $urls[0]);
+                ?>
                 <hr class="border border-green-600">
                 <div class="py-8 flex flex-wrap md:flex-no-wrap ">
 
                     <div class="xl:w-64 lg:w-2/12 md:w-3/12 md:mb-0 mb-6 md:mr-10  sm:mx-auto flex-shrink-0 flex flex-col">
                         <!-- Image -->
-                        <img alt="ecommerce" class="mx-auto xl:w-3/5 lg:w-5/6 md:w-11/12 sm:w-64 h-auto object-cover object-center rounded" src="https://dummyimage.com/400x400">
+
+
+                        <img alt="ecommerce" class="mx-auto xl:w-3/5 lg:w-5/6 md:w-11/12 sm:w-64 h-auto object-cover object-center rounded" src="../upload/<?= $url[1]; ?>">
                     </div>
+
                     <!-- Content -->
                     <div class="md:flex-grow w-full">
                         <!-- Title -->

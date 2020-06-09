@@ -9,6 +9,8 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <title><?= SITE_NAME; ?> </title>
 </head>
 

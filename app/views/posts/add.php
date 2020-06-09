@@ -79,12 +79,12 @@
                         <textarea name="full-description" placeholder="Full description" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"></textarea>
 
                         <!-- Upload files -->
-                        <input type="file" name="file[]" class=" py-2 mb-4" id="file" accept="image/png, image/jpeg" multiple>
+                        <input type="file" name="images[]" class=" py-2 mb-4" id="file" accept="image/png, image/jpeg" multiple>
 
                         <div id="preview-container" class="image-preview mb-10">
                             <img src="" alt="Image Preview" class="img-prev hidden h-24">
                         </div>
-                        <?php var_dump($_FILES) ?>
+                        
                         <!-- Button -->
                         <input type="submit" name="add-post" value="Add post" class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                     </div>

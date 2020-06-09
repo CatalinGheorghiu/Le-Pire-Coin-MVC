@@ -97,4 +97,9 @@ class Database
         $this->execute();
         return $this->stmt->fetchColumn();
     }
+
+    public function lastId()
+    {
+        return $this->dbh->lastInsertId();
+    }
 }

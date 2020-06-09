@@ -18,6 +18,7 @@
     },
     "homepage": "https://github.com/CatalinGheorghiu/Le-pire-coin#readme",
     "dependencies": {
+        "@glidejs/glide": "^3.4.1",
         "tailwindcss": "^1.4.6"
     }
 }

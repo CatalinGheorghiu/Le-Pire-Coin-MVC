@@ -10,7 +10,7 @@
 <h3>Details:</h3>
 <p>The index page shows all the announces with some basic details and a button that redirects the user to a detailed
     page. </p>
-<p>The project has an <strong> authentification</strong> system that permets to a user to make the basic <strong>
+<p>The project has an <strong> authentification</strong> system that permets user to make the basic <strong>
         CRUD</strong> operations
 </p>
 <hr>

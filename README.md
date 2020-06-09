@@ -3,7 +3,7 @@
 <h2>Description:</h2>
 
 <p> "Le Pire Coin" has an MVC pattern, uses PDO ,
-    PHP Password Hashing feature .</p>
+    PHP Password Hashing feature etc...</p>
 <p> The project was a PHP Challenge Project I have done in my bootcamp program.</p>
 <hr>
 

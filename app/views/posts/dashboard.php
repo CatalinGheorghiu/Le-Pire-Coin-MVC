@@ -14,9 +14,9 @@
                 <hr class="border border-green-600">
 
                 <!-- Title -->
-                <h2 class="text-xl text-center font-medium text-gray-900 title-font mb-2 md:mt-10 "><?= $post->title; ?></h2>
+                <h2 class="text-xl text-center font-medium text-gray-900 title-font mt-5 md:mt-10 "><?= $post->title; ?></h2>
                 
-                <div class="py-8 flex flex-wrap md:flex-no-wrap ">
+                <div class="pb-8 flex flex-wrap md:flex-no-wrap ">
 
                     <!-- Image -->
                     <img alt="ecommerce" class="my-5 mx-auto md:w-2/4 md:my-0 lg:w-3/5 object-cover object-center rounded" src="../upload/<?= $url[1]; ?>">

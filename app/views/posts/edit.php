@@ -5,7 +5,7 @@
         <div class="text-gray-700 body-font relative">
             <h2 class="text-gray-900  text-center my-10 text-4xl title-font">Edit your announce</h2>
             <form action="<?= URL_ROOT; ?>/posts/edit/<?= $data['id']; ?>" method="post" class="edit-post" enctype="multipart/form-data">
-                <div class="container px-5 py-24 mx-auto flex">
+                <div class="container px-5 mb-10  mx-auto flex">
                     <div class=" flex flex-col mx-auto relative z-10 w-full md:w-9/12 lg:w-11/12 xl:w-9/12">
 
                         <div class="flex flex-col justify-between  sm:flex-row sm:flex-wrap  lg:flex-row ">
@@ -76,9 +76,9 @@
 
 
 
-                        <textarea name="full-description" placeholder="Full description" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"><?= htmlspecialchars($data['full_description']); ?></textarea>
+                        <textarea name="full-description" placeholder="Full description" class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 my-2 mb-10 resize-none"><?= htmlspecialchars($data['full_description']); ?></textarea>
 
-                        <input type="file" name="file[]" class=" py-2 mb-4" id="file" accept="image/png, image/jpeg" multiple>
+                        <input type="file" name="file[]" class=" py-2 mb-10" id="file" accept="image/png, image/jpeg" multiple>
 
                         <input type="submit" name="edit-post" value="Edit post" class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                     </div>

@@ -14,9 +14,9 @@
                 <hr class="border border-green-600">
 
                 <!-- Title -->
-                <h2 class="text-xl text-center font-medium text-gray-900 title-font mb-2 md:mt-10 "><?= $post->title; ?></h2>
 
-                <div class="py-8 flex flex-wrap md:flex-no-wrap ">
+                <h2 class="text-xl text-center font-medium text-gray-900 title-font pt-5 mb-2 md:mt-10 "><?= $post->title; ?></h2>
+                <div class="pb-8 flex flex-wrap md:flex-no-wrap ">
 
                     <!-- Image -->
                     <?php if (isset($url[1])) : ?>
@@ -55,11 +55,5 @@
         <!-- End of card -->
     </div>
 </div>
-
-
-
-
-
-
 
 <?php require APP_ROOT . '/views/include/footer.php'; ?>

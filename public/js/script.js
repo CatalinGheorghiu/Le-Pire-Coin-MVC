@@ -1,4 +1,4 @@
-//* 
+//*
 const alert = document.getElementById("msg-flash");
 //If the alert message class is available..
 if (alert) {
@@ -74,3 +74,8 @@ var swiper = new Swiper(".swiper-container", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+//Javascript to toggle the menu
+document.getElementById("nav-toggle").onclick = function () {
+    document.getElementById("nav-content").classList.toggle("hidden");
+};

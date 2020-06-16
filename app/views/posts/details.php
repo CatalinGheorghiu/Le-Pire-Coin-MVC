@@ -6,7 +6,7 @@
         <div class="my-8 mx-auto shadow-lg  px-10 xl:w-3/4">
             <h1 class="text-2xl text-center  sm:text-4xl mb-5"><?= $data['post']->title; ?></h1>
 
-            <div class="swiper-container h-pixels-300 md:h-pixels-500 lg:h-pixels-600 ">
+            <div class="swiper-container h-pixels-300 md:h-pixels-500  ">
                 <div class="swiper-wrapper ">
                     <?php foreach ($data['images'] as $key => $img) : ?>
                         <img src="../../<?= $img; ?>" alt="" class=" object-center object-contain  swiper-slide lg:object-cover">

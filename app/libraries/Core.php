@@ -14,11 +14,11 @@ class Core
 
     public function __construct()
     {
-        // var_dump($this->getUrl());
         $url = $this->getUrl();
+        // var_dump($url);
 
         //Look in controllers for firs value
-        if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
+        if ($url !== null) {
             //if exists ,than set it as curent controller
             $this->currentController = ucwords($url[0]);
 

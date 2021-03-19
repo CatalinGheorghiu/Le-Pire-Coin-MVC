@@ -14,6 +14,6 @@
         CRUD</strong> operations
 </p>
 <hr>
-<h3>For this project i'v used :</h3>
+<h3>For this project I have used :</h3>
 <p> <a href="https://tailwindcss.com/" target="_blank">Tailwindcss </a></p>
 <p> <a href="https://swiperjs.com/" target="_blank">SwiperJs</a></p>
